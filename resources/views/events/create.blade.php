@@ -67,9 +67,9 @@
         <form action="{{ route('events.store') }}" method="POST">
             @csrf
             <label for="title">Title :</label>
-            <input type="text" name="title" required>
+            <input type="text" name="title" required>   
 
-            <label for="event_date">Event Date :</label>
+            <label for="event_date">Event Date & Time :</label>
             <input type="datetime-local" name="event_date" required>
 
             <button type="submit" class="createBtn">Create</button>

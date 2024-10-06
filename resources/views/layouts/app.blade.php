@@ -62,7 +62,7 @@
         .navbar-brand:hover {
             color: rgb(57, 230, 57);
             text-shadow: 0 0 15px rgb(64, 64, 234),
-                         0 0 35px #fff;
+                0 0 35px #fff;
             transform: scale(1);
         }
 
@@ -112,6 +112,7 @@
             transform: scaleX(1);
         }
 
+
         .createEventBtn {
             display: flex;
             text-align: center;
@@ -158,6 +159,7 @@
             <a class="navbar-brand" href="/">Event <span class="appSpan">Planner</span></a>
             <ul class="navbar-nav">
                 <li class="nav-item">
+                    <a class="a" href="{{ route('home') }}">Home</a>
                     <a class="a" href="{{ route('events.index') }}">Events</a>
                     <a href="{{ route('events.create') }}">
                         <button class="createEventBtn">Add Event</button>
