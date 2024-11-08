@@ -15,7 +15,7 @@ class RemoveDescriptionFromEventsTable extends Migration
 
     public function down()
     {
-        Schema::table('events', function (Blueprint $table) {
+        Schema::table('events', function (Blueprint $table) {   
             $table->text('description')->nullable();
         });
     }

@@ -6,17 +6,28 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateEventsTable extends Migration
 {
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
     public function up()
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('description')->nullable();
             $table->dateTime('event_date');
+            $table->text('description')->nullable(); // Keep this line
+            // $table->string('location')->nullable(); // Remove or comment out this line
             $table->timestamps();
         });
     }
 
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
     public function down()
     {
         Schema::dropIfExists('events');
